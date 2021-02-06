@@ -1,11 +1,9 @@
 {
-  "name": "my-divjoy-project",
+  "name": "peacocking",
   "version": "0.1.0",
   "private": true,
-  "keywords": [
-    "divjoy"
-  ],
-  "description": "Built with Divjoy, a React codebase generator. You must purchase a license at https://divjoy.com?ref=cs in order to use any of the code in this project.",
+  "keywords": [],
+  "description": "deals yo",
   "dependencies": {
     "react": "17.0.1",
     "react-dom": "17.0.1",
