@@ -6,6 +6,7 @@ import TestimonialsSection2 from "components/TestimonialsSection2";
 import EditStats from "components/EditStats";
 import { useAuth, requireAuth } from "util/auth.js";
 import { useRouter } from "next/router";
+import { updateUser } from "util/db.js";
 
 function ProfilesPage2(props) {
   const auth = useAuth();
@@ -46,6 +47,15 @@ function ProfilesPage2(props) {
         title="Here's what people are saying"
         subtitle=""
       />
+      <div>{auth.user.firm}</div>
+      <button
+        onClick={() => {
+          const randomInt = Math.floor(Math.random() * 100);
+          updateUser(auth.user.uid, { firm: `bigCap-${randomInt}` });
+        }}
+      >
+        CLICK TO UPDATE SOMETHING
+      </button>
 
       {auth.user.uid === router.query.id && (
         <EditStats
